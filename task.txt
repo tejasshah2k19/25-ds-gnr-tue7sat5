@@ -1,0 +1,35 @@
+Question : Asian Paint -> 
+                Jan 25CR 
+                Feb 75CR
+                March 50CR 
+                April 14CR
+                May   60CR 
+                June  10CR
+                July  21Cr
+                Aug   10CR 
+
+ 
+
+                tax rebate -> 74CR  
+
+                two month sum -> x amount -> free 
+
+                April May 
+
+                tax rebate -> 60 CR 
+                March June 
+------------------------------------------------------------------------
+
+          0  1 2  3  4  5  6  7 
+profit [ 25,75,50,14,60,10,21,10]
+
+taxRebate = 74 
+output : 3 4 
+
+taxRebate -> 60 
+output : 2 5 
+
+
+
+
+
