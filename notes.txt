@@ -1,0 +1,53 @@
+Array
+
+    array ->    collection of same type of data type 
+
+    int a; // a = 10 , a =20
+
+    int a[300];
+
+
+    int a[5]; // int:4 byte  20byte 
+
+    2000  2001 2002 2003 
+    2004
+
+    memory -> 
+    RAM -> stack , heap 
+    C: stack 
+    java : heap 
+
+
+array -> access -> index -> subscript  
+        start : 0 
+        end   : SIZE - 1 
+
+
+types -> 
+    1) one dimension******* 
+    2) two dimension 
+    3) multi dimension
+
+---------------------------------------------------------------------------
+
+
+DS -> 
+        2 
+            Linear DS 
+            Non Linear DS 
+
+
+notations -> 3 
+    1) Best :  Omega 
+    2) Avg  :  Theta 
+    3) W    :  Big O 
+
+
+---------------------------------------------------------------------------
+
+array -> 
+    5 size array 
+
+    insert(location,data); 
+    
+
