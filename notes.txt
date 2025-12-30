@@ -365,3 +365,80 @@ for(i=1;i<SIZE;i++){
     }
     a[j+1] = tmp; 
 }
+
+-------------------------------------------------
+
+pointer -> 
+
+int a; // value
+
+int *p; // pointer variable --> memory address --> integer variable --> 
+float *x; // pointer variable -> memory address => float variable --> 
+
+int **q; //store and address int* 
+
+
+
+a = 10; 
+p = &a; // address of a 
+
+q = &p;
+
+printf(" %d " ,a ); // 10 
+
+printf(" %d " ,p); // 200
+
+printf(" %d " ,*p); // 10 
+
+printf(" %d ",&p); // 400 
+
+pf	q	400	
+pf	&q	600	
+pf	*q	200	
+pf	**q	10	
+
+
+
+-----------------------------------------------------------------------
+
+structure --> 
+
+        student 
+                name 
+                maths
+                sci
+                eng 
+                perc : derived
+                grade : derived  
+
+
+
+90+ A 
+70+ B 
+35+ C
+>35 D 
+
+RAM     80  80  80  80  B 
+-----------------------------------------------------------------------
+struct student{
+    char name[30];
+    int maths;
+    int sci;
+    int eng;
+    float perc; 
+    char grade; 
+};
+
+struct student s; 
+struct student *p; 
+
+p = &s; 
+
+
+printf("Enter name and marks of three subjects");
+scanf("%s%d%d%d",&p->name,&s.maths,&s.sci,&s.eng); 
+
+p->perc = (p->maths + p->sci + p->eng ) / 3.0; 
+
+-----------------------------------------------------------------------
+
