@@ -442,3 +442,57 @@ p->perc = (p->maths + p->sci + p->eng ) / 3.0;
 
 -----------------------------------------------------------------------
 
+
+void main(){ 
+    int a; // 4 byte  2byte //SMA 
+
+    int x[30]; //
+
+
+    DMA 
+
+//end 
+
+
+
+}
+
+DMA ->
+        calloc() -> multiple block same size 
+        malloc() -> single 
+
+        free() 
+
+        realloc()
+
+
+    int *a; 
+
+
+-------------------------------------------------------------------------------
+Linked list -> dynamic list 
+            -> ++ , -- 
+            -> 10 20 30 40 
+
+
+            -> node { data } { data can be any - int , char ,string , collection of n number of items }
+            -> node is divide in two part { data and next } in single linked list 
+                -> data 
+                -> address of next node 
+            -> node is divided in three parts { previous | data  | next} in double linked list 
+            -> first node is always refer as HEAD , start 
+
+            we have three types of linked list 
+                1) single or singly linked list 
+                2) double or doubly linked list 
+                3) circular linked list 
+
+-------------------------------------------------------------------------------
+Single Linkedlist -> 
+
+        [  data  | next ]
+        
+        structure => 
+
+
+
