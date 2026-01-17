@@ -494,5 +494,98 @@ Single Linkedlist ->
         
         structure => 
 
+-------------------------------------------------------------------------------
+
+structure -> 
+
+
+    studentName : char [] 
+    age : int  
+    sturct student *next; 
+
+    s1  { name: ram , age : 25}
+    s2  { name: laxman , age : 23}
+
+
+    s1  { name: ram , age : 25,next}
+    s2  { name: laxman , age : 23,next}
+
+
+-------------------------------------------------------------------------------
+ 
+
+ head , tmp , last 
+
+
+ s1 = malloc()
+ s1 {name,age,next} { ram,25,200}
+ last = s1 
+
+
+ s2=malloc() #200
+   {name,age,next} {laxman,25,250}
+ last->next = s2;     
+ last = s2; 
+
+
+ s2 = malloc() #250
+  {name,age,next}{sita,25,1000}
+ last->next = s2; 
+ last = s2; 
+
+
+s2 = malloc() #1000
+s2,last {name,age,next}{rava,30,NULL}
+last->next = s2 ; 
+last = s2; 
+
+ 
+
+
+-------------------------------------------------------------------------------
+
+struct Employee{
+    char name[30]; 
+    int salary ;
+    struct Employee *next; 
+}*first, *last;
+
+
+main(){
+
+    struct Employee *tmp; 
+
+    first = malloc(sizeof(struct Employee));
+
+    printf("Enter name and salary");
+    scan("%s%d",&first->name,&first->salary);
+    first->next = NULL; 
+    last = first; 
+
+
+
+    tmp = malloc(sizeof(struct Employee));
+    printf("Enter name and salary");
+    scan("%s%d",&tmp->name,&tmp->salary);
+    tmp->next = NULL; 
+    last->next = tmp; 
+    last = tmp; 
+
+
+    tmp = malloc(sizeof(struct Employee));
+     printf("Enter name and salary");
+    scan("%s%d",&tmp->name,&tmp->salary);
+    tmp->next = NULL;   last->next = tmp; 
+     last = tmp; 
+    
+     tmp = malloc(sizeof(struct Employee));
+     printf("Enter name and salary");
+    scan("%s%d",&tmp->name,&tmp->salary);
+    tmp->next = NULL;   last->next = tmp; 
+     last = tmp; 
+
+    return 0; 
+}
+ 
 
 
