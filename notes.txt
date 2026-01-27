@@ -588,4 +588,18 @@ main(){
 }
  
 
+------------------------------------
+
+Linked List -> dynamic list 
+
+add -> allocate 
+remvoe -> release 
+
+
+DMA -> malloc , calloc , free  
+        malloc -> single block 
+        calloc -> n number of blocks with same size 
+        stdlib.h 
+
+------------------------------------
 
