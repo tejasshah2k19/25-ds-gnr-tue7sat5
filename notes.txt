@@ -732,7 +732,28 @@ arraySum(3); => 10+2+31 => 43
 ---------------------------------------------------------
 
 
+Non Linear DS -> tree graph 
 
+Tree --> 
+        forest 
+        binary tree { parent having max 2 child node } 
+        binary search tree  {
+                                 1) i am a binary tree 
+                                 2) if child node is greater than parent then it must be on right side of parent 
+                                 3) if child node is lesser than parent then it must be left side of parent 
+                            } 
+
+                        34,56,78,90,9,28,70,15,43,23,40
+------------------------------------------------------------------------------------                            
+BST 
+
+                    34
+             9              56
+                28      43       78
+            15      40        70    90
+                23 
+
+------------------------------------------------------------------------------------                            
 
 
 
