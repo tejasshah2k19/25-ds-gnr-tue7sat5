@@ -603,3 +603,157 @@ DMA -> malloc , calloc , free
 
 ------------------------------------
 
+recursion -> function calling itself 
+
+:start 
+
+void sub(){
+    printf("sub");
+}
+
+void add(){
+    sub();
+    printf("add");
+}
+
+
+void main(){
+    
+    printf("hi");
+    add();
+    printf("bye");
+    add();
+
+
+}
+
+:end 
+
+------------------------------------------------------------------------------
+
+void add(){
+    printf("add");
+    add();//recursion 
+}
+
+void main(){
+
+    printf("hi");
+    add();
+    printf("bye");
+}
+
+
+1) function calling itself
+2) base case -> condition -> recursion break / stop 
+
+------------------------------------------------------------------------------
+
+
+void add(int num){ //0
+    printf("add");
+    if(num != 0)
+        add(num-1);//recursion 
+}
+
+void main(){
+
+    printf("hi");
+    add(5);
+    printf("bye");
+}
+
+hi 
+add(5) => add
+            add(4) => add 
+                        add(3) => add 
+                                    add(2) => add 
+                                                add(1) => add 
+                                                            add(0) => add 
+bye 
+
+   
+
+------------------------------------------------------------------------------
+
+
+
+void add(int num){ //0
+    printf("\n%d",num);
+    if(num != 0)
+        add(num-1);//recursion 
+}
+
+void main(){
+
+    printf("start");
+    add(5);
+    printf("end");
+}
+
+
+
+------------------------------------------------------------------------------
+
+1) print your name 5 times using recursion: 
+    royal
+    royal
+    royal
+    royal
+    royal
+
+    void printName(int num){
+        printf("\nRoyal");//1 
+        if(num != 1)
+            printName(num-1);// 
+    }
+
+    main(){
+        printName(5);
+    }
+
+2) print 10 to 1 using recursion: 
+---------------------------------------------------------
+ 
+linearSearch(30,0);
+
+---------------------------------------------------------
+
+a = {10,2,31,4,5}
+
+
+int arraySum(index);
+
+arraySum(2); => 10+2 => 12 
+
+arraySum(3); => 10+2+31 => 43
+
+
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
