@@ -8,42 +8,91 @@ struct node
     struct node *right;
 };
 
-struct node *root = NULL;
-struct node *tmp = NULL;
-
-struct node *addNode(struct node *root, int num) // null,70   70,80  null,80
+struct node *addNode(struct node *root, int data) // root:90 , 150
 {
     if (root == NULL)
     {
-
-        root = malloc(sizeof(struct node)); // data , left , right
-        root->data = num;
+        root = malloc(sizeof(struct node));
+        root->data = data;
         root->left = NULL;
         root->right = NULL;
-        return root;
     }
-    else if (num > root->data)
+    else
     {
-        // right
-        root->right = addNode(root->right, num);
+        if (data > root->data)
+        {
+            // right
+            root->right = addNode(root->right, data);
+        }
+        else if (data < root->data)
+        {
+            // left
+            root->left = addNode(root->left, data);
+        }
     }
-    else if (num < root->data)
-    {
-        // left
-        root->left = addNode(root->left, num);
-    }
-
     return root;
+}
+
+void inOrder(struct node *root)
+{
+
+    if (root != NULL)
+    {
+        inOrder(root->left);
+        printf(" %d ", root->data);
+        inOrder(root->right);
+    }
+}
+
+void preOrder(struct node *root)
+{
+
+    if (root != NULL)
+    {
+        printf(" %d ", root->data);
+        preOrder(root->left);
+        preOrder(root->right);
+    }
+}
+
+void postOrder(struct node *root)
+{
+
+    if (root != NULL)
+    {
+        postOrder(root->left);
+        postOrder(root->right);
+        printf(" %d ", root->data);
+    }
 }
 
 int main()
 {
 
-    root = addNode(root, 70);
-    root = addNode(root, 80);
-    root = addNode(root, 60);
+    struct node *root = NULL;
 
-    printf(" %d %d %d ", root->data, root->left->data, root->right->data); // 70 60 80
+    // root = addNode(root, 90);
+    // root = addNode(root, 50);
+    // root = addNode(root, 150);
+    // root = addNode(root, 200);
+    // printTree(root); // 50 90 150 200
+
+    // // root = addNode(root, 20);
+    // // root = addNode(root, 30);
+    // // printTree(root); // 20 30 50 90 150 200
+
+    root = addNode(root, 50);
+    root = addNode(root, 70);
+    root = addNode(root, 30);
+    root = addNode(root, 20);
+    root = addNode(root, 40);
+    root = addNode(root, 55);
+    root = addNode(root, 90);
+
+    // tree travesal -->
+    // root
+
+    inOrder(root); //
 
     return 0;
 }

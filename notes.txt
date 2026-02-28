@@ -754,6 +754,24 @@ BST
                 23 
 
 ------------------------------------------------------------------------------------                            
+tree travesal -->
+
+        inOrder   : left - root - right  
+
+        preOrder  : root - left - right 
+        
+        postOrder : left - right - root 
+
+
+        inOrder -> left 
+            left , root , right 
+            20,30,40 ,  50  , 55 , 70 , 90 
+
+        preOrder -> root , left , right 
+
+        postOrder => left , right , root 
+        
+
 
 
 
