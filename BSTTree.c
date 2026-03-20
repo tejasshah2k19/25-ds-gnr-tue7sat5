@@ -80,8 +80,11 @@ struct node *deleteNode(struct node *root, int data) // root:90 , 150
             // 2 child
             if (root->left != NULL && root->right != NULL)
             {
+
+                int min = findSmallest(root);
+                root->data = min;     
                 printf("\n2 Child node deleted");
-                return NULL;
+                return deleteNode(root->right,min);
             }
             // 0 child
             else if (root->left == NULL && root->right == NULL)
