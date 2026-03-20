@@ -33,7 +33,6 @@ struct node *addNode(struct node *root, int data) // root:90 , 150
     return root;
 }
 
-
 void inOrder(struct node *root)
 {
 
@@ -67,24 +66,40 @@ void postOrder(struct node *root)
     }
 }
 
-
 struct node *deleteNode(struct node *root, int data) // root:90 , 150
 {
     if (root == NULL)
     {
         printf("\n Data Not found");
-     }
+    }
     else
     {
-        if(data == root->data ){
-            //0 child 
-            if(root->left == NULL && root->right == NULL){
+        if (data == root->data)
+        {
+
+            // 2 child
+            if (root->left != NULL && root->right != NULL)
+            {
+                printf("\n2 Child node deleted");
+                return NULL;
+            }
+            // 0 child
+            else if (root->left == NULL && root->right == NULL)
+            {
                 printf("\n0 Child node deleted");
                 return NULL;
             }
-            //1 child 
-
-            //2 child 
+            else{
+                // 1 child
+                printf("\n1 Child node delete");
+                if(root->left != NULL){
+                    return root->left; 
+                }else{
+                    return root->right; 
+                }
+               
+            }
+            
         }
         else if (data > root->data)
         {
@@ -128,19 +143,26 @@ int main()
 
     // inOrder(root); //
 
+    root = addNode(root, 70);
+    root = addNode(root, 30);
+    root = addNode(root, 90);
+    root = addNode(root, 20);
+    root = addNode(root, 80);
+    root = addNode(root, 120);
+    root = addNode(root, 75);
 
-    root = addNode(root,70);
-    root = addNode(root,30);
-    root = addNode(root,90);
-    root = addNode(root,20);
-    root = addNode(root,80);
-    root = addNode(root,120);
-    root = addNode(root,75);
+    // inOrder(root);
+    // root = deleteNode(root, 75);
+    // inOrder(root);
 
+    
     inOrder(root);
-    root = deleteNode(root,75);
-
+    root = deleteNode(root, 30);
     inOrder(root);
+    
+     
+    // root = deleteNode(root, 90);
+  
 
     return 0;
 }
