@@ -772,6 +772,46 @@ tree travesal -->
         postOrder => left , right , root 
         
 
+--------------------------------------------------------------
+Graph --> 
+
+    non linear data structure 
+
+    collection of vertices and edges 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
